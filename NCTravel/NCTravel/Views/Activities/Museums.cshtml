@@ -1,0 +1,53 @@
+﻿@model NCTravel.Models.activitiesViewModel
+@{
+    ViewBag.Title = "Museums";
+}
+
+<link rel="stylesheet" href="~/Content/animate.css" />
+
+
+<style>
+    .jumbotron {
+        background-image: url('/Images/museum.jpg');
+        background-size: cover;
+        height: 100%;
+        color: white;
+        text-align: center;
+    }
+
+    .thumbnail {
+        background-color: white;
+        animation-delay: 0.75s;
+    }
+
+    .caption {
+        text-align: center;
+    }
+</style>
+
+<div class="jumbotron animated slideInDown">
+    <h1>Museums</h1>
+    <p></p>
+
+</div>
+
+@foreach (var item in Model.activities)
+{
+
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail animated slideInUp">
+            <h3 style="text-align: center;">@item.actProvider</h3>
+            <img src="@item.actImgFile" alt="..." width="150" height="150">
+            <div class="caption">
+                <h3>@item.actName</h3>
+                <p>@item.actPrice</p>
+                <p>
+                    <a href="@item.actWebsite" class="btn btn-default" role="button">Website</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+}
+

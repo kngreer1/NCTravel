@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>About this Site</h2><br />
+
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Purpose
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                This site is meant to showcase my web developement skills.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Development
+                </a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+                <span>This is an ASP.NET MVC Application build using Visual Studio.</span><br />
+                <br />
+                <strong>External Resources</strong> <br />
+
+                Bootswatch Theme - <a href="https://bootswatch.com/readable/">Readable</a><br />
+                <a href="https://daneden.github.io/animate.css/">Animate.css</a><br />
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Future Projects
+                </a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+                I am working on a mobile version of this application. I am currently taking a class on mobile development. We are using Angular, Ionic UI, and Codova. 
+            </div>
+        </div>
+    </div>
+</div>

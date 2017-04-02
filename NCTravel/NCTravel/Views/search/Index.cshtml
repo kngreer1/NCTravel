@@ -1,0 +1,52 @@
+﻿@model NCTravel.Models.searchViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<link rel="stylesheet" href="~/Content/animate.css" />
+
+
+
+<style>
+
+    .jumbotron{
+  
+        width: 100%;
+    }
+    .thumbnail {
+        background-color: white;
+    }
+
+    .caption {
+        text-align: center;
+    }
+</style>
+
+<br />
+<br />
+<div class="jumbotron">
+    <h1>Search <a class="glyphicon glyphicon-search" style="color: black"></a></h1>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+    @using (Html.BeginForm("Index", "search", FormMethod.Post, new { id = "categorySelect" }))
+    {
+        <div>
+            <fieldset>
+
+
+                @*<label for="selCategories">Choose a Category:</label>*@
+                @Html.DropDownList("categorySelect",
+                                 new SelectList(Model.Categories, "CategoryID", "CategoryName"),
+                                 "Choose a Category",
+                                 new { @onchange = "submit();" })
+
+            </fieldset>
+        </div>
+
+    }
+</div>
+    <div class="panel-body">
+    </div>
+</div>
